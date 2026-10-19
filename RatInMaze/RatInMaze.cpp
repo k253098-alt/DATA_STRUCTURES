@@ -16,10 +16,10 @@ void solveMaze(int maze[n][n], int row, int col, string path){
 	
 	maze[row][col] = -1; //visited
 	
-	solveMaze(maze, row-1, col, path +"U ");
 	solveMaze(maze, row+1, col, path +"D ");
-	solveMaze(maze, row, col-1, path +"L ");
 	solveMaze(maze, row, col+1, path +"R ");
+	solveMaze(maze, row, col-1, path +"L ");
+	solveMaze(maze, row-1, col, path +"U ");	
 	
 	maze[row][col] = 1;
 }
